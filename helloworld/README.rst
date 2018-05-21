@@ -1,0 +1,3 @@
+- ``hub.py``: Funciona como HUB com as regras configuradas anteriormente.
+- ``hubflow.py``: Funciona como HUB criando entradas na tabela de fluxo sob demanda.
+- ``switch.py``: Funciona como um Switch L2.
