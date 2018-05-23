@@ -31,10 +31,18 @@ Teste
 
 .. code-block:: sh
 
+  # Servidor HTTP
   python3 -m http.server 80
+
+  # Servidor RTP
+  gst-launch-1.0 -v videotestsrc ! videoconvert ! vp8enc ! rtpvp8pay ! tcpserversink host=0.0.0.0 port=80
 
 **h1**:
 
 .. code-block:: sh
 
+  # Cliente HTTP
   wget -O- 10.0.0.2
+
+  # Cliente RTP
+  gst-launch-1.0 -v tcpclientsrc host=10.0.0.2 port=80 ! application/x-rtp, encoding-name="(string)VP8" ! rtpvp8depay ! vp8dec ! autovideosink
