@@ -24,6 +24,13 @@ Redireciona os pacotes HTTP (TCP 80) do servidor ``10.0.0.2`` para o servidor ``
   ryu-manager --verbose redirecttcp.py l2switch.py base.py
 
 
+Controlar via API REST
+======================
+
+- Para verificar o estado do redirect, acesse: http://127.0.0.1:8080/redirecttcp
+- Para ativar/desativar o redirect, acesse: http://127.0.0.1:8080/redirecttcp/change
+
+
 Teste
 =====
 
